@@ -13,6 +13,33 @@
  *= require_tree .
  *= require_self
  */
+ 
+ 
+ /*ナビバーの下に余白を入れた。*/
 body{ 
-              padding-top: 60px; 
-          }
+    padding-top: 60px; 
+}
+
+.font_test {
+    text-align:center;
+    color: #2196F3;     /* 文字色指定 */
+}
+
+.small_font {
+    text-align:center;
+}
+
+/*トップ画像*/
+.top-image {
+  position: relative;
+  height: 550px;
+  background: url(man2.jpg) center center;
+  background-size: cover;
+}
+
+/*トップ画像内文字調節用*/
+.mgr-10{
+    margin-left : 70px;
+}
+
+
