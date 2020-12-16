@@ -1,6 +1,7 @@
 <!--<h1>Users#new</h1>-->
 <!--<p>Find me in app/views/users/new.html.erb</p>-->
 
+
 <div class="text-center">
   <h1>アカウント登録</h1>
 </div>
@@ -9,6 +10,8 @@
   <div class="col-sm-6 offset-sm-3">
 
     <%= form_with(model: @user, local: true) do |f| %>
+      <%= render 'layouts/error_messages', model: f.object %>
+      <!--ここでは f.object は @user が代入されている-->
       
       <div class="form-group">
         <%= f.label :name, 'ニックネーム' %>
