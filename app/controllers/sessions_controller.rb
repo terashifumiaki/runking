@@ -15,6 +15,10 @@ class SessionsController < ApplicationController
   end
 
   def destroy
+    session[:user_id] = nil
+    flash[:success] = 'ログアウト完了'
+    redirect_to root_url
+    # ログアウト後はトップページにリダイレクト
   end
   
   private
