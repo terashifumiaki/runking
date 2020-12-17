@@ -1,3 +1,7 @@
+<!--logged_inとcurrent_userはHelperを用意して実装-->
+<% if logged_in? %>
+  <p>ログイン完了ユーザ: <%= current_user.name %></p>
+<% else %>
 
 <div class="top-image jumbotron">
   <div class="mgr-10">
@@ -14,27 +18,31 @@
   <div class="row">
     <div class="col-md-6">  
         <div class="font_test">
-          <h2>それは、明日への投資</h2>
+          <h2>日々を記録しよう</h2>
         </div>
-        <p>ランニングのよさとは<br>
-        asfasdfasdfasdfa・<br>
-        ここに文章と画像</p>
+        <br>
+        <p>ランニングのよさとは</p>
+        <p>asfasdfasdfasdfa</p>
+        <p>ここに文章と画像</p>
     </div>
     
     <div class="col-md-6">  
         <div class="font_test">
-          <h2>ここに右側の画像と文</h2>
+          <h2>仲間と競い合おう</h2>
         </div>
-        <p>あｓｄふぁｓｄふぁｓｄふぁｓｄｆ<br>
-        あｓｄふぁｓｄふぁｓｄｆ<br>
-        あｓｄふぁｓｄふぁｓｄ</p>
+        <br>
+        <p>あｓｄふぁｓｄふぁｓｄふぁｓｄｆ</p>
+        <p>あｓｄふぁｓｄふぁｓｄｆ</p>
+        <p>あｓｄふぁｓｄふぁｓｄ</p>
     </div>
   </div>
   
   <div class="row">
     <div class="col-md-12"> 
       <div class="text-center">
+        <div class="area">
         <%= link_to 'サインアップ', signup_path, class: 'btn btn-lg btn-primary' %>
+        </div>
       </div>
     </div>
   </div>

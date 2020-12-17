@@ -22,7 +22,7 @@ body{
 
 .font_test {
     text-align:center;
-    color: #2196F3;     /* 文字色指定 */
+    
 }
 
 .small_font {
@@ -43,3 +43,8 @@ body{
 }
 
 
+/*サインアップボタンの上下*/
+.area{
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
