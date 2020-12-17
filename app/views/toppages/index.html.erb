@@ -1,7 +1,45 @@
 <!--logged_inとcurrent_userはHelperを用意して実装-->
+<!--ログイン後のトップページを表示させるために実装↓ログイン後サインアップボタンを消す方法分からず。-->
 <% if logged_in? %>
   <p>ログイン完了ユーザ: <%= current_user.name %></p>
+  
+<div class="top-image jumbotron">
+  <div class="mgr-10">
+    <h1>Runking</h1>
+    <br>
+    <h2>とびこもう<br>
+    <br>
+    ランニングの世界</h2>
+  </div>
+</div>
+
+<div class="container">
+  
+  <div class="row">
+    <div class="col-md-6">  
+        <div class="font_test">
+          <h2>日々を記録しよう</h2>
+        </div>
+        <br>
+        <p>ランニングのよさとは</p>
+        <p>asfasdfasdfasdfa</p>
+        <p>ここに文章と画像</p>
+    </div>
+    
+    <div class="col-md-6">  
+        <div class="font_test">
+          <h2>仲間と競い合おう</h2>
+        </div>
+        <br>
+        <p>あｓｄふぁｓｄふぁｓｄふぁｓｄｆ</p>
+        <p>あｓｄふぁｓｄふぁｓｄｆ</p>
+        <p>あｓｄふぁｓｄふぁｓｄ</p>
+    </div>
+  </div>
+  
 <% else %>
+
+<!--ここからログイン前のトップページ-->
 
 <div class="top-image jumbotron">
   <div class="mgr-10">
@@ -41,9 +79,12 @@
     <div class="col-md-12"> 
       <div class="text-center">
         <div class="area">
-        <%= link_to 'サインアップ', signup_path, class: 'btn btn-lg btn-primary' %>
+        <%= link_to 'アカウント登録', signup_path, class: 'btn btn-lg btn-primary' %>
+        <%= link_to 'ログイン', login_path, class: 'btn btn-lg btn-primary' %>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+<% end %>

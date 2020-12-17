@@ -1,4 +1,7 @@
 class UsersController < ApplicationController
+  # before_action では only: で指定されたアクションに対して、事前処理を設定できます。
+  before_action :require_user_logged_in, only: [:index, :show]
+  
   def index
     @users = User.order(id: :desc).page(params[:page]).per(25)
   end

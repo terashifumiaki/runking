@@ -11,6 +11,7 @@
       <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
         <ul class="navbar-nav">
           <!--ログイン後の表示切り替えlogged_in,else,endまで-->
+         <!--logged_inとcurrent_userはHelperを用意して実装-->
           <% if logged_in? %>
             <li class="nav-item"><%= link_to 'ユーザ一覧', users_path, class: 'nav-link' %></li>
             <li class="nav-item dropdown">
@@ -22,7 +23,7 @@
               </ul>
             </li>
           <% else %>
-            <li class="nav-item"><%= link_to"サインアップ", signup_path, class:"nav-link" %></li>
+            <li class="nav-item"><%= link_to"アカウント登録", signup_path, class:"nav-link" %></li>
             <li class="nav-item"><%= link_to"ログイン",login_path, class:"nav-link" %></li>
           <% end %>
         </ul>
